@@ -20,10 +20,10 @@
 
 
    :root {
-      --primary: #33bffb;
+      --primary: #04e6ee;
       --secondary: #00d4f5;
       --accent: #00e5db;
-      --bg: #5af1b5;
+      --bg: #ff00dd;
       --text: #f9f871;
    }
    body{
