@@ -1,0 +1,68 @@
+/* ตั้งค่าพื้นฐาน */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* สไตล์กรอบการ์ดสีขาว */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* หัวข้อ Depth */
+.card h2 {
+    font-size: 28px;
+    color: #111111;
+    margin-bottom: 12px;
+}
+
+/* ข้อความคำอธิบายด้านบน */
+.subtitle {
+    font-size: 13px;
+    color: #555555;
+    line-height: 1.4;
+    margin-bottom: 25px;
+}
+
+/* กล่องตัวเลขสถิติ */
+.stat-box {
+    margin-bottom: 25px;
+}
+
+.stat-box:last-child {
+    margin-bottom: 0;
+}
+
+/* ป้ายตัวเลขสีเขียว */
+.highlight-green {
+    display: inline-block;
+    background-color: #2ecc71;
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+/* ข้อความอธิบายใต้ตัวเลข */
+.stat-desc {
+    font-size: 12px;
+    color: #333333;
+    line-height: 1.4;
+}
