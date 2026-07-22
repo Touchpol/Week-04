@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Prompt', sans-serif;
+}
+
+/* 2. แถบประกาศโปรโมชั่นด้านบนสุด */
+.top-banner {
+    background-color: rgb; /* พื้นหลังสีดำเข้ม */
+    color: #ffffff; /* ตัวหนังสือสีขาว */
+    text-align: center; /* ให้อยู่ตรงกลาง */
+    padding: 10px;
+    font-size: 13px;
+}
+
+/* 3. แถบเมนูด้านบน (Navbar) */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* ดันโลโก้อยู่ซ้าย เมนูอยู่กลาง/ขวา */
+    align-items: center; /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+    padding: 20px 50px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea; /* เส้นคั่นบางๆ ด้านล่าง */
+    position: sticky; /* ทำให้เมนูเกาะติดจอเวลาเลื่อนลง */
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 900; /* ตัวหนาพิเศษ */
+    letter-spacing: 3px; /* ระยะห่างระหว่างตัวอักษร */
+}
+
+.nav-links a {
+    margin: 0 15px;
+    text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
+    color: #333333;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #000000; /* เปลี่ยนเป็นสีดำเข้มเวลาเอาเมาส์ชี้ */
+}
+
+/* 4. ส่วนต้อนรับตรงกลาง (Hero Section) */
+.hero {
+    height: 75vh; /* ความสูง 75% ของหน้าจอ */
+    background-color: #0f0f0f; /* พื้นหลังสีดำสไตล์สตรีท */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* จัดทุกอย่างให้อยู่กลางจอ */
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 44px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 16px;
+    color: #aaaaaa; /* สีเทา */
+    margin-bottom: 25px;
+}
+
+.btn-shop {
+    background-color: #ffffff; /* ปุ่มสีขาว */
+    color: #000000; /* ตัวหนังสือสีดำ */
+    padding: 12px 35px;
+    border: none;
+    cursor: pointer; /* เปลี่ยนรูปเมาส์เป็นรูปมือเวลาชี้ */
+    font-weight: bold;
+    transition: 0.3s; /* ทำให้เวลาชี้แล้วเปลี่ยนสีแบบนุ่มนวล */
+}
+
+.btn-shop:hover {
+    background-color: #dddddd; /* เปลี่ยนเป็นสีเทาอ่อนเวลาเอาเมาส์ชี้ */
+}
+
+/* 5. ส่วนแสดงสินค้า (Products Section) */
+.products-section {
+    padding: 60px 50px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.products-section h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+/* จัดเรียงสินค้าเป็นตาราง 3 คอลัมน์ */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* แบ่งเป็น 3 ช่องเท่าๆ กัน */
+    gap: 30px; /* ระยะห่างระหว่างสินค้าแต่ละชิ้น */
+}
+
+.product-card {
+    text-align: left;
+}
+
+/* กรอบรูปสินค้า */
+.product-img {
+    height: 320px;
+    background-color: #f4f4f4; /* สีพื้นหลังกันรูปโหลดไม่ทัน */
+    border-radius: 4px;
+    overflow: hidden; /* ซ่อนส่วนเกิน */
+    margin-bottom: 15px;
+}
+
+/* บังคับรูปภาพให้พอดีกับกรอบ */
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ตัดรูปให้เต็มกรอบสวยงาม ไม่เบี้ยว */
+    transition: transform 0.3s; /* ทำอนิเมชันเวลาซูม */
+}
+
+/* เอฟเฟกต์ซูมรูปเวลาเอาเมาส์ชี้ที่สินค้า */
+.product-card:hover .product-img img {
+    transform: scale(1.05); /* ขยายใหญ่ขึ้น 5% */
+}
+
+.product-card h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #222222;
+}
+
+.price {
+    font-weight: bold;
+    color: #000000;
+}
+
+/* 6. ส่วนท้ายเว็บ (Footer) */
+footer {
+    background-color: #0f0f0f;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+    margin-top: 60px;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
