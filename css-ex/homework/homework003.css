@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+/* จัดกึ่งกลางหน้าจอ */
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+/* ใช้ Flexbox แบ่งซ้าย-ขวา */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 60px; /* ระยะห่างระหว่างรูปกับข้อความ */
+    max-width: 1000px;
+    background: #fff;
+    padding: 60px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+/* --- ฝั่งรูปภาพ --- */
+.image-box {
+    position: relative; /* สำคัญ: เพื่อให้กล่องสีน้ำเงินอ้างอิงตำแหน่งตามรูป */
+    width: 380px;
+    height: 420px;
+}
+
+/* กรอบสีน้ำเงินด้านหลังที่เหลื่อmลงมา */
+.blue-backdrop {
+    position: absolute;
+    top: 20px;    /* ขยับลงมาด้านล่าง */
+    left: -20px;  /* ขยับไปทางซ้าย */
+    width: 100%;
+    height: 100%;
+    background-color: #1d4ed8; /* สีน้ำเงิน */
+    border-radius: 24px;
+    z-index: 1;   /* อยู่ชั้นหลัง */
+}
+
+/* รูปภาพหลัก */
+.image-box img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    z-index: 2;   /* อยู่ชั้นหน้า ทับกรอบสีน้ำเงิน */
+}
+
+/* --- ฝั่งข้อความ --- */
+.content-box {
+    flex: 1; /* ให้ขยายพื้นที่เต็มส่วนที่เหลือ */
+}
+
+.content-box h1 {
+    font-size: 32px;
+    color: #111;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.content-box p {
+    font-size: 15px;
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* ปุ่มกดสไตล์ในสไลด์ */
+.btn-learn {
+    background-color: #93c5fd; /* ฟ้าอ่อน */
+    color: #0f172a;
+    border: 2px solid #0f172a;
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 3px 3px 0px #0f172a; /* เงาดำแข็งๆ สไตล์โมเดิร์น */
+    transition: 0.1s;
+}
+
+.btn-learn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0px #0f172a;
+}
+
+.btn-learn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px #0f172a;
+}
